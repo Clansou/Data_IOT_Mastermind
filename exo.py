@@ -19,8 +19,9 @@ while(True):
         r = urequests.get(url)
         result = r.json()
         print(result)
-        if result['chosencolor'] == result['resultcolor']:
-            print("gg")
+        for i in range(len(result['chosencolor'])):
+            if result['chosencolor'][i] == result['resultcolor'][i]:
+                print("gg")
         r.close()
         time.sleep(1)
     except Exception as e:

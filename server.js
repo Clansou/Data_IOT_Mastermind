@@ -10,8 +10,8 @@ app.use(express.json())
 app.use(cors())
 
 const color = ["red","blue","green","purple"]
-const chosencolor = color[0]
-const resultcolor = "red"
+const chosencolor = [color[0],color[0]]
+const resultcolor = ["red","red"]
 
 app.get('/',(req, res) => {
     res.send({"chosencolor":chosencolor,"resultcolor":resultcolor})
